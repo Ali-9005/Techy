@@ -1,0 +1,143 @@
+@import "https://fonts.googleapis.com/css2?family=Tajawal&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+body {
+  background-color: #eeeeee;
+}
+
+.top {
+  color: white;
+}
+.top h1 {
+  text-align: center;
+  color: #636363;
+  font-family: "Tajawal", sans-serif;
+}
+
+.top svg {
+  width: 60px;
+  height: 60px;
+  animation: floatAnim 2s ease-in-out infinite;
+}
+#carousel {
+  animation: floatCarousel 2s ease-in-out infinite;
+}
+
+#laptops {
+  text-align: center;
+  font-family: Montserrat, Tajawal, sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: #2b2a2a 2px 2px 5px;
+}
+.laptopInformation {
+  color: #0b0b0b;
+  /* text-shadow: #2b2a2a 2px 2px 3px; */
+  font-family: Montserrat;
+  padding: 50px;
+
+}
+
+.laptopInformation img {
+  transition: all 0.3s ease-in-out;
+}
+
+#shopText {
+  color: #ffffff;
+  text-shadow: #2b2a2a 2px 2px 5px;
+  text-align: center;
+}
+.shopLaptops h1 {
+  text-shadow: #2b2a2a 2px 2px 2px;
+  font-family: Tajawal;
+  border-bottom: 2px solid #0b0b0b;
+}
+.laptops {
+  overflow-x: hidden;
+  flex-flow: column wrap;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+}
+
+.laptops .left {
+  margin: 10px;
+  text-align: left;
+}
+
+.laptops .right {
+  margin: 10px;
+  text-align: right;
+}
+
+.laptops img {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.laptops p {
+  padding: 10px;
+  font-family: Tajawal;
+  color: #888787;
+  transition: all 0.2s ease-in-out;
+}
+.laptops p:hover {
+  font-size: 16px;
+  transform: scale(1.1);
+}
+
+.laptops h1 {
+  font-family: Montserrat, Tajawal, sans-serif;
+  color: #ffffff;
+}
+
+.laptops .left,
+.laptops .right {
+  width: 100%;
+  border-radius: 10px;
+  padding: 28px 70px;
+  background-color: #0b0b0b;
+}
+.laptops .left {
+  width: 100%;
+}
+
+.padding {
+  padding-top: 100px;
+}
+
+@keyframes floatCarousel {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, 5px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@media screen and (max-width: 992px) {
+  .laptops .left,
+  .laptops .right {
+    text-align: center;
+  }
+  .laptops img {
+    margin: 0 auto;
+    width: 60%;
+  }
+}
+
+@keyframes floatAnim {
+  0% {
+    transform: translateX(0px, 0px);
+  }
+  50% {
+    transform: translateX(0px, 10px);
+  }
+
+  100% {
+    transform: translateX(0px, 0px);
+  }
+}

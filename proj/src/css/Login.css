@@ -1,0 +1,54 @@
+.loginContainer {
+    max-width: 40%;
+}
+.account h1 {
+    font-family: 'Tajawal';
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+.buttons {
+    border: none;
+    text-align: center;
+    font-family: 'Tajawal';
+
+}
+.buttons button {
+    width: 100%;
+    color: white;
+    height: 62px;
+    line-height: 10px;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.inputs {
+
+    text-align: center;
+    direction: rtl;
+ 
+    width: 100%;
+}
+
+.inputs input {
+    font-family: 'Tajawal';
+    height: 62px;
+    border-radius: 5px;
+    color: #403866;
+    background-color: #e6e6e6;
+    
+}
+@media screen and (max-width: 992px) {
+    .loginContainer {
+        max-width: 80%;
+    }
+}
+
+#signIn {
+    background-color: #827ffe;
+}
+#signUp {
+    background-color: #ffc900;
+}
+

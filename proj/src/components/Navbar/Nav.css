@@ -1,0 +1,103 @@
+/* 
+nav {
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+  nav {
+    border-radius: 0px;
+  }
+} */
+/* Techy TEXT */
+
+@import url("https://fonts.googleapis.com/css?family=Coiny");
+
+.cloud-text,
+img {
+  font-family: "Coiny", cursive;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/clouds.jpg);
+  background-size: auto;
+  background-attachment: unset;
+  background-position: 0%;
+  font-size: 24px;
+  margin: 0 auto;
+  animation: clouds-moving infinite 60s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-timing-function: linear;
+  text-align: center;
+}
+@keyframes clouds-moving {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+.attribute {
+  position: relative;
+  font-size: 26px;
+  text-align: center;
+}
+
+
+/* Navigation */
+.padding {
+  padding-top: 30px;
+}
+nav {
+  display: block;
+  margin: 0 auto;
+  width: 58%;
+  border-radius: 5px;
+  font-size: 18px;
+
+}
+.p-1 path {
+  color: #818181;
+}
+.p-1 path:hover {
+  color: #706e6e;
+}
+
+span:hover {
+  position: relative;
+}
+
+span[title]:hover:after {
+  content: attr(title);
+  padding: 10px;
+  width: fit-content;
+  position: absolute;
+  left: -40%;
+  top: 100%;
+  font-weight: 600;
+  font-family: "Tajawal";
+  font-size: 12px;
+  text-align: center;
+  z-index: 1;
+  background: #0b0b0b;
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    padding-top: 0px;
+    border-radius: 0px;
+    width: 100%;
+  }
+  .padding {
+    padding-top: 0px;
+  }
+}

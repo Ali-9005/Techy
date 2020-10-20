@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  font-family: "Verdana", cursive, sans-serif;
+  color: #ffffff;
+}
+
+#topImg {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+@keyframes floatAnim {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) rotateY(10deg);
+  }
+
+  50% {
+    transform: translate(0px, 10px);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(0deg) rotateY(10deg);
+  }
+}
+
+.score-section {
+  text-align: center;
+
+  display: flex;
+  color: black;
+  width: 100%;
+}
+#score {
+  font-size: 30px;
+  font-family: Tajawal;
+  color: #403866;
+  text-align: center;
+}
+#boldScore {
+  font-weight: bold;
+  color: #403866;
+}
+
+.score-section button {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+
+
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+}
+
+.question-count {
+  color: #0b0b0b;
+  margin-bottom: 20px;
+}
+
+.question-count span {
+  color: #0b0b0b;
+  font-weight: 600;
+  font-family: "Tajawal", sans-serif;
+  font-size: 28px;
+}
+
+.question-text {
+  color: #0b0b0b;
+  font-weight: 600;
+  font-family: "Tajawal", sans-serif;
+  margin-bottom: 12px;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  font-family: "Tajawal", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrongAnswers {
+  display: block;
+}
+.wrongAnswers ul li {
+  text-align: center;
+  font-size: 24px;
+  list-style: none;
+  font-family: Tajawal;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: rgb(21, 2, 26);
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+.wrongAnswers h1 {
+  font-size: 26px;
+  font-family: Tajawal;
+  font-weight: 600;
+  color: #403866;
+  text-align: center;
+}
+#quizButton {
+  width: 100%;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #0d37ce;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#restartButton,
+#goBack {
+  font-family: Tajawal;
+
+  font-size: 16px;
+  color: #ffffff;
+  border: none;
+  background-color: #0023a1;
+  border-radius: 15px;
+  margin: 5px;
+  padding: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.difficulties {
+  padding-top: 10px;
+  border: none;
+  text-align: center;
+  font-family: "Tajawal";
+  margin: 0 auto;
+  display: flex;
+}
+
+.difficulties button:focus {
+  outline: none;
+}
+.difficulties button {
+  color: white;
+  height: 62px;
+  font-size: 30px;
+  color: #ffffff;
+  background-image: linear-gradient(
+    90deg,
+    rgb(104, 80, 255),
+    rgb(167, 80, 255)
+  );
+  border-radius: 15px;
+  text-align: center;
+  width: 50%;
+  padding: 30px;
+  cursor: pointer;
+  border: none;
+
+  transition: all 0.3s ease-in-out;
+  line-height: 10px;
+  font-weight: 600;
+  margin: 15px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.start {
+  text-align: center;
+}
+
+.start h1 {
+  font-family: Tajawal;
+  color: #403866;
+}
+
+#startQuiz:hover {
+  box-shadow: 0px 5px 2px 0px rgba(0, 0, 0, 0.35);
+  transform: translate(0px, -10px) scale(1.1);
+}
+#restartButton:hover,
+#goBack:hover,
+#quizButton:hover {
+  background-color: #284dcf;
+}
+
+#quizButton:focus {
+  outline: none;
+}
+
+#quizButton svg {
+  margin-right: 5px;
+}
+.app {
+  margin: 0 auto;
+
+  border-radius: 15px;
+  padding: 15px;
+  max-width: 50%;
+}
+@media screen and (max-width: 1300px) {
+  .app {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #topImg {
+    width: 80%;
+  }
+  .app {
+    max-width: 90%;
+  }
+  .difficulties {
+    display: block;
+  }
+  .difficulties button {
+    margin: 5px;
+  }
+}
+
+/* 
+.app {width: 100%; height: 100vh;
+} 
+
+.clouds { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url(../images/cloud.png);
+ animation: animate 60s linear infinite; z-index: -9;} 
+ @keyframes animate 
+ { 
+ 0% { background-position: 0px; } 
+ 100% { background-position: -5440px; } } */
