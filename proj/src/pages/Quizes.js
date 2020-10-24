@@ -5,23 +5,21 @@ import image from "../images/computer.png";
 import { Image, Container } from "react-bootstrap";
 
 
-
 //easy images
-import easy1 from '../images/easy/easy1.png';
-import easy2 from '../images/easy/easy2.png';
-import easy3 from '../images/easy/easy3.png';
-import easy4 from '../images/easy/easy4.png';
-
-
+import easy1 from "../images/easy/easy1.png";
+import easy2 from "../images/easy/easy2.png";
+import easy3 from "../images/easy/easy3.png";
+import easy4 from "../images/easy/easy4.png";
 
 //medium images
-import medium2 from '../images/medium/medium2.png';
+import medium2 from "../images/medium/medium2.png";
 
 //hard images
 
 // import QuizNavbar from "../components/QuizNavbar/QuizNavbar";
 
 export default function Quiz() {
+
   const easy = [
     {
       questionText: "ما هي وظيفة الرامات في الجهاز ؟ ",
@@ -29,7 +27,10 @@ export default function Quiz() {
         { answerText: "تساعد على تخزين المعلومات", isCorrect: false },
         { answerText: "هي النظام في الجهاز", isCorrect: false },
         { answerText: "لا يوجد لها وظيفة", isCorrect: false },
-        { answerText: "يمكن من خلالها القراءة عليها والكتابة بواسطة البرامج", isCorrect: true },
+        {
+          answerText: "يمكن من خلالها القراءة عليها والكتابة بواسطة البرامج",
+          isCorrect: true,
+        },
       ],
       src: easy1,
     },
@@ -38,8 +39,16 @@ export default function Quiz() {
       answerOptions: [
         { answerText: "هي مجموعة مفيدة و تساعد الجهاز", isCorrect: false },
         { answerText: "فايروس كورونا ؟", isCorrect: false },
-        { answerText: "هي مجموعة من البرامج الضارة بالملفات الموجودة داخل الجهاز", isCorrect: true },
-        { answerText: "عامل ممرض صغير لا يمكنه التكاثر إلا داخل خلايا كائن حي آخر", isCorrect: false },
+        {
+          answerText:
+            "هي مجموعة من البرامج الضارة بالملفات الموجودة داخل الجهاز",
+          isCorrect: true,
+        },
+        {
+          answerText:
+            "عامل ممرض صغير لا يمكنه التكاثر إلا داخل خلايا كائن حي آخر",
+          isCorrect: false,
+        },
       ],
 
       src: easy2,
@@ -66,8 +75,9 @@ export default function Quiz() {
 
       src: easy4,
     },
-{
-      questionText: "يتم حفظ معلومات وحدات الادخال و الاخراج الخاصه بالجهاز و الشركه المصنعه في :",
+    {
+      questionText:
+        "يتم حفظ معلومات وحدات الادخال و الاخراج الخاصه بالجهاز و الشركه المصنعه في :",
       answerOptions: [
         { answerText: "CPU", isCorrect: false },
         { answerText: "Windows", isCorrect: false },
@@ -128,7 +138,10 @@ export default function Quiz() {
       answerOptions: [
         { answerText: "يمكنه برمجة جميع اللغات", isCorrect: false },
         { answerText: "يمكنه التعامل مع قواعد البيانات", isCorrect: false },
-        { answerText: "يمكنه برمجة لغات من طرف العميل وطرف الخادم", isCorrect: true },
+        {
+          answerText: "يمكنه برمجة لغات من طرف العميل وطرف الخادم",
+          isCorrect: true,
+        },
       ],
       src: image,
     },
@@ -190,16 +203,16 @@ export default function Quiz() {
     boxShadow: "10px 10px 42px 0px rgba(0, 0, 0, 0.75)",
   };
 
+
+
   return (
     <>
-      {/* <QuizNavbar /> */}
       <div style={{ paddingTop: "60px" }} />
 
       <Container
         className="app"
         style={started === false ? null : styleStarted}
       >
-        {/* <div className="clouds"></div>  */}
         {showScore ? (
           <>
             <h1 id="score">
@@ -307,5 +320,5 @@ export default function Quiz() {
         )}
       </Container>
     </>
-  );
+    )
 }

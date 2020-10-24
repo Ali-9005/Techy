@@ -210,7 +210,7 @@ body {
 
   border-radius: 15px;
   padding: 15px;
-  max-width: 50%;
+  max-width: 40%;
 }
 @media screen and (max-width: 1300px) {
   .app {

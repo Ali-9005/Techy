@@ -1,0 +1,12 @@
+.cart h1 {
+    text-align: center;
+    color: #403866;
+    font-family: Montserrat ;
+}
+.cart {
+    text-align: center;
+}
+#removeAll {
+    margin: 5px;
+    text-align: center;
+}

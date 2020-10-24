@@ -12,23 +12,21 @@ export default function FooterContainer() {
             
             <Footer.Wrapper>
             <Footer.Row>
-                <Footer.Column>
+                {/* <Footer.Column>
                 <Footer.Title>About Me</Footer.Title>
                     <Footer.Link href="#">Story</Footer.Link>
 
-                </Footer.Column>
-                {}
+                </Footer.Column> */}
+
                 <Footer.Column>
                 <Footer.Title>Contact Me</Footer.Title>
                     <Footer.Link href="#">epictaig@gmail.com</Footer.Link>
-
                 </Footer.Column>
                 <Footer.Column>
                 <Footer.Title>Social</Footer.Title>
-                    <Footer.Link href="#"><Icon className="fab fa-facebook-f" />Facebook</Footer.Link>
-                    <Footer.Link href="#"><Icon className="fab fa-instagram" />Instagram</Footer.Link>
-                    <Footer.Link href="#"><Icon className="fab fa-youtube" />Youtube</Footer.Link>
-                    <Footer.Link href="#"><Icon className="fab fa-twitter" />Twitter</Footer.Link>
+                    <Footer.Link href="https://www.snapchat.com/add/aliahmad2a"><Icon className="fab fa-snapchat" />aliahmad2a</Footer.Link>
+                    <Footer.Link href="https://www.instagram.com/ali_alfadhli1/"><Icon className="fab fa-instagram" />ali_alfadhli1</Footer.Link>
+                    <Footer.Link href="https://github.com/Ali-9005"><Icon className="fab fa-github" />Ali-9005</Footer.Link>
                 </Footer.Column>
             </Footer.Row>
             </Footer.Wrapper>

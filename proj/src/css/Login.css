@@ -1,54 +1,69 @@
 .loginContainer {
-    max-width: 40%;
+  max-width: 40%;
 }
 .account h1 {
-    font-family: 'Tajawal';
-    color: #000000;
-    font-weight: bold;
-    text-align: center;
+  font-family: "Tajawal";
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
 }
 .buttons {
-    border: none;
-    text-align: center;
-    font-family: 'Tajawal';
+  border: none;
+  text-align: center;
+  font-family: "Tajawal";
+}
 
+.errMsg {
+  color: #ed4337;
+}
+.successMsg {
+  color: rgb(40, 224, 40);
 }
 .buttons button {
-    width: 100%;
-    color: white;
-    height: 62px;
-    line-height: 10px;
-    margin: 0 auto;
-    font-weight: 600;
-    font-size: 22px;
+  width: 100%;
+  color: white;
+  height: 62px;
+  line-height: 10px;
+  margin: 0 auto;
+  font-weight: 600;
+  font-size: 22px;
+}
+#resetPassword {
+    color: #b9b9b9;
 }
 
-.inputs {
+.inputs button {
+  outline: none;
+  border: none;
 
-    text-align: center;
-    direction: rtl;
- 
-    width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+#resetPassword:hover {
+  color: #403866;
+}
+.inputs button:hover {
+    color: #dad6d6;
+}
+.inputs {
+  width: 100%;
 }
 
 .inputs input {
-    font-family: 'Tajawal';
-    height: 62px;
-    border-radius: 5px;
-    color: #403866;
-    background-color: #e6e6e6;
-    
+  font-family: "Tajawal";
+  height: 62px;
+  border-radius: 5px;
+  color: #403866;
+  background-color: #e6e6e6;
 }
 @media screen and (max-width: 992px) {
-    .loginContainer {
-        max-width: 80%;
-    }
+  .loginContainer {
+    max-width: 80%;
+  }
 }
 
 #signIn {
-    background-color: #827ffe;
+  background-color: #827ffe;
 }
 #signUp {
-    background-color: #ffc900;
+  background-color: #ffc900;
 }
-

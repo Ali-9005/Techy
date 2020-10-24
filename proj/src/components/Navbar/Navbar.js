@@ -3,10 +3,15 @@ import { Navbar, Nav } from "react-bootstrap";
 // import { NavLink } from "react-router-dom";
 import Logo from "../../images/logo.svg";
 import "./Nav.css";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Navigation() {
+import { useAuth } from "../../contexts/AuthContext";
+
+export default function Navigation(props) {
+  const { currentUser } = useAuth();
+  const { cartNumber } = props;
+
   return (
     <>
       <div className="padding" />
@@ -37,14 +42,51 @@ export default function Navigation() {
             >
               Quizes
             </Nav.Link>
+            <Nav.Link
+              active={window.location.pathname === "/shop" ? true : false}
+              href="/shop"
+            >
+              Shop
+            </Nav.Link>
           </Nav>
 
           <Nav className="ml-auto">
-          <Nav.Link
+            {currentUser && currentUser.email ? (
+              <p className="name">{`Welcome ${
+                currentUser.email.split("@")[0]
+              }`}</p>
+            ) : null}
+            <Nav.Link
               active={window.location.pathname === "/login" ? true : false}
               href="/login"
             >
-              <span title="حسابك"><FontAwesomeIcon icon={faUser} color="#6DB65B" size="2x" className="p-1"/></span>
+              <span
+                title={
+                  currentUser && currentUser.email
+                    ? currentUser.email.split("@")[0]
+                    : "حسابك"
+                }
+              >
+                <FontAwesomeIcon
+                  icon={faUser}
+                  color="#6DB65B"
+                  size="2x"
+                  className="p-1"
+                />
+              </span>
+            </Nav.Link>
+            <Nav.Link
+              active={window.location.pathname === "/cart" ? true : false}
+              href="/cart"
+            >
+              <FontAwesomeIcon
+                icon={faShoppingCart}
+                size="2x"
+                className="p-1"
+              />
+              <span class="badge badge-warning" id="lblCartCount">
+                {cartNumber}
+              </span>
             </Nav.Link>
           </Nav>
 
